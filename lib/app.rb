@@ -7,9 +7,8 @@ get '/' do
 end
 
 get '/cat' do
-  '<div style="border: 3px dashed red">
-  <img src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697" alt="cute cat" height=500 width=700>
-  </div>'
+  @name = ["Amigo", "Misty", "Almond"].sample
+  erb :index
 end
 
 get '/hello/:name' do
