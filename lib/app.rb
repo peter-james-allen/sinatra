@@ -6,8 +6,13 @@ get '/' do
   'Testing 2'
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Amigo", "Misty", "Almond"].sample
+  erb :index
+end
+
+get '/named-cat' do
+  @name = params[:name]
   erb :index
 end
 
